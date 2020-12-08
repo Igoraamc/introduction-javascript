@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+.container {
+  margin: 2% 10% 0 10%;
+}
+
+.container h1 {
+  text-align: center;
+}

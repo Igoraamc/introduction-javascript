@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="todo-page">
+      <div class="container">
+        <h1>Todo List</h1>
+        <input id="todo-item" />
+        <button type="button" id="create-item">Create</button>
+        <div id="list">
+          <div class="list-item">Panda</div>
+          <div class="list-item">Pablo</div>
+          <div class="list-item">Beca</div>
+          <div class="list-item">Braz</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const list = document.getElementById('list');
+      document.getElementById('create-item').onclick = () => {
+        const inputValue = document.getElementById('todo-item').value;
+        const div = document.createElement('div');
+        const t = document.createTextNode(inputValue);
+        div.appendChild(t);
+        list.appendChild(div);
+        document.getElementById('todo-item').value = '';
+      };
+    </script>
+  </body>
+</html>
